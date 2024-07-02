@@ -1,4 +1,4 @@
-package pro.sky;
+package pro.sky.list;
 
 public interface StringList {
     // Добавление элемента.
