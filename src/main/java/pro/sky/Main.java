@@ -12,13 +12,13 @@ public class Main {
     }
 
     private static long calculateExecutionTimeInMillis(int repeat, int size, Consumer<int[]> sortAlgprithm) {
-        long tineInMillis = 0;
+        long timeInMillis = 0;
         for (int i = 0; i < repeat; i++) {
             long start = System.currentTimeMillis();
             sortAlgprithm.accept(generateArray(size));
-            tineInMillis += System.currentTimeMillis() - start;
+            timeInMillis += System.currentTimeMillis() - start;
         }
-        return tineInMillis / repeat;
+        return timeInMillis / repeat;
 
     }
 
