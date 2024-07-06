@@ -6,8 +6,8 @@ import java.util.function.Consumer;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Среднее время сортировки пузырьком" + calculateExecutionTimeInMillis(10, 100_000, Main::sortBubble) + "ms");
-        System.out.println("Среднее время сортировки выбором" + calculateExecutionTimeInMillis(10, 100_000, Main::sortSelection)+ "ms");
-        System.out.println("Среднее время сортировки вставками" + calculateExecutionTimeInMillis(10, 100_000, Main::sortInsertion)+ "ms");
+        System.out.println("Среднее время сортировки выбором" + calculateExecutionTimeInMillis(10, 100_000, Main::sortSelection) + "ms");
+        System.out.println("Среднее время сортировки вставками" + calculateExecutionTimeInMillis(10, 100_000, Main::sortInsertion) + "ms");
 
     }
 
@@ -29,6 +29,7 @@ public class Main {
         }
         return array;
     }
+
     private static void sortBubble(int[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {
             for (int j = 0; j < arr.length - 1 - i; j++) {
@@ -38,6 +39,7 @@ public class Main {
             }
         }
     }
+
     private static void sortSelection(int[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {
             int minElementIndex = i;
@@ -49,6 +51,7 @@ public class Main {
             swapElements(arr, i, minElementIndex);
         }
     }
+
     private static void sortInsertion(int[] arr) {
         for (int i = 1; i < arr.length; i++) {
             int temp = arr[i];
@@ -60,10 +63,11 @@ public class Main {
             arr[j] = temp;
         }
     }
-    public static void  swapElements(int[] array,int i,int j){
+
+    public static void swapElements(int[] array, int i, int j) {
         int tmp = array[i];
         array[i] = array[j];
-        array[j]= tmp;
+        array[j] = tmp;
     }
 
 }
